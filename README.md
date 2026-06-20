@@ -8,7 +8,7 @@
 
 Este repositório compreende o **Sistema de Gerenciamento de Tarefas (To-Do List)**, uma aplicação web robusta concebida para a otimização de fluxos de trabalho, organização de atividades e acompanhamento de metas operacionais. O sistema foi desenvolvido com estrito alinhamento a critérios de segurança da informação, integridade de dados e separação de privilégios de acesso.
 
-A solução dispõe de uma política de governança de acessos granular, mitigando riscos de exposição de dados: usuários operacionais gerenciam de forma autônoma suas respectivas demandas, enquanto o controle de contas e configurações estruturais permanecem centralizados sob a tutela exclusiva de perfis administrativos.
+A solução dispõe de uma política de governança de acessos granular, mitigando riscos de exposição de dados: utilizadores operacionais gerenciam de forma autônoma suas respectivas demandas, enquanto o controle de contas e configurações estruturais permanecem centralizados sob a tutela exclusiva de perfis administrativos.
 
 ---
 
@@ -18,14 +18,14 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 * **Controle de Sessões:** Mecanismo integrado de autenticação que impede acessos não autorizados a endpoints internos da aplicação.
 * **Criptografia de Credenciais:** Armazenamento seguro de senhas em banco de dados por meio de algoritmos de *hashing* unidirecional, inviabilizando a leitura de dados sensíveis em caso de vazamento.
 
-### 👥 Governança de Usuários e Permissões
+### 👥 Governança de Utilizadoress e Permissões
 * **Hierarquia Claras de Acesso:** Divisão explícita de escopo entre perfis do tipo `Administrador` e `Normal`.
-* **Criação Centralizada de Contas:** Por premissa de segurança do ecossistema, **apenas administradores** detêm privilégios para registrar e cadastrar novos usuários.
-* **Política Restrita por Padrão:** Novos registros inseridos na plataforma assumem compulsoriamente o status padrão de usuário comum (`normal`), evitando a escalada involuntária de privilégios.
+* **Criação Centralizada de Contas:** Por premissa de segurança do ecossistema, **apenas administradores** detêm privilégios para registrar e cadastrar novos utilizadores.
+* **Política Restrita por Padrão:** Novos registros inseridos na plataforma assumem compulsoriamente o status padrão de utilizador comum (`normal`), evitando a escalada involuntária de privilégios.
 
 ### 📋 Gestão de Atividades (CRUD)
 * **Persistência Completa:** Operações completas de criação, leitura, atualização e exclusão de tarefas de forma performática.
-* **Escopo de Visualização:** Usuários possuem gerência exclusiva sobre o seu próprio inventário de tarefas, enquanto o perfil administrador possui visibilidade analítica global para fins de auditoria.
+* **Escopo de Visualização:** utilizadores possuem gerência exclusiva sobre o seu próprio inventário de tarefas, enquanto o perfil administrador possui visibilidade analítica global para fins de auditoria.
 * **Sincronização Temporal:** Tratamento nativo e padronizado de datas e prazos sob o fuso horário de **Cabo Verde (CVT / UTC-1)**, eliminando discrepâncias em auditorias e entregas de prazos.
 
 ---
@@ -34,7 +34,7 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 
 * **Back-end:** PHP (Lógica de negócios, segurança de requisições e processamento de dados).
 * **Banco de Dados:** MySQL (Persistência relacional otimizada com chaves estrangeiras e integridade referencial).
-* **Front-end:** HTML5, CSS3 e JavaScript (Interface limpa, responsiva e focada na experiência do usuário).
+* **Front-end:** HTML5, CSS3 e JavaScript (Interface limpa, responsiva e focada na experiência do utilizador).
 
 ---
 
@@ -52,7 +52,7 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 ├── modules/
 │   ├── auth/             # Módulo de autenticação, logout e tratamento de hashes
 │   ├── tasks/            # Controladores e interfaces do ecossistema de tarefas
-│   └── users/            # Painel administrativo de controle e cadastro de usuários
+│   └── users/            # Painel administrativo de controle e cadastro de utilizadores
 ├── index.php             # Ponto de entrada unificado da aplicação
 └── README.md             # Documentação técnica do sistema
 ```
