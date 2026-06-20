@@ -58,25 +58,25 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 ```
 ---
 
-## ⚙️ Instalação e Implantação
+## ⚙️ Instalação e Implementação
 
 ### 📌 Pré-requisitos
 
-Para a execução do sistema em ambiente local de homologação, é necessária a infraestrutura de um servidor web com interpretador PHP e o motor de banco de dados MySQL ativos.
+Para a execução do sistema num ambiente local de desenvolvimento ou testes, é necessária uma infraestrutura composta por um servidor web com suporte para PHP e um sistema de gestão de bases de dados MySQL em funcionamento.
 
 Recomenda-se a utilização de ambientes como:
 
-- XAMPP
-- Laragon
-- Docker
-- LAMP
-- WAMP
+* XAMPP
+* Laragon
+* Docker
+* LAMP
+* WAMP
 
-ou outras stacks equivalentes.
+ou outras soluções equivalentes.
 
 ---
 
-## 🚀 Passo a Passo para Configuração
+## 🚀 Passos para Configuração
 
 ### 1. Clonagem do Repositório
 
@@ -88,11 +88,11 @@ cd projeto_todolist
 
 ---
 
-### 2. Instanciação do Banco de Dados
+### 2. Criação da Base de Dados
 
-1. Acesse a ferramenta de gerenciamento do seu banco de dados (ex.: phpMyAdmin).
+1. Aceda à ferramenta de administração da sua base de dados (por exemplo, phpMyAdmin).
 
-2. Crie um novo schema (banco de dados) denominado:
+2. Crie uma nova base de dados com o nome:
 
 ```text
 todolist_db
@@ -104,30 +104,32 @@ todolist_db
 database/schema.sql
 ```
 
-para a correta criação das tabelas e relacionamentos.
+para criar todas as tabelas, restrições e relacionamentos necessários ao funcionamento da aplicação.
 
 ---
 
-### 3. Parametrização do Ambiente
+### 3. Configuração da Ligação à Base de Dados
 
-Edite o arquivo:
+Edite o ficheiro:
 
 ```text
 config/database.php
 ```
 
-Substitua as variáveis pelas credenciais correspondentes ao seu servidor MySQL local:
+e actualize os parâmetros de ligação de acordo com a configuração do seu servidor MySQL:
 
-- Host
-- Usuário
-- Senha
-- Nome do Banco de Dados
+* Anfitrião (Host)
+* Utilizador
+* Palavra-passe
+* Nome da Base de Dados
 
 ---
 
-### 4. Alinhamento de Timezone
+### 4. Configuração do Fuso Horário
 
-O sistema assegura a consistência cronológica executando nativamente a seguinte instrução durante a inicialização:
+O sistema garante a consistência temporal através da utilização do fuso horário oficial de Cabo Verde.
+
+A seguinte instrução é executada durante a inicialização da aplicação:
 
 ```php
 date_default_timezone_set('Atlantic/Cape_Verde');
@@ -135,9 +137,9 @@ date_default_timezone_set('Atlantic/Cape_Verde');
 
 ---
 
-### 5. Inicialização
+### 5. Execução da Aplicação
 
-1. Aloque o diretório do projeto na pasta raiz pública do servidor web.
+1. Copie a pasta do projecto para o directório público do seu servidor web.
 
 Exemplos:
 
@@ -151,12 +153,12 @@ ou
 www
 ```
 
-2. Certifique-se de que os serviços estejam ativos:
+2. Certifique-se de que os seguintes serviços estão activos:
 
-- Apache
-- MySQL
+* Apache
+* MySQL
 
-3. Navegue até:
+3. Abra o navegador e aceda ao endereço:
 
 ```text
 http://localhost/projeto_todolist
@@ -166,12 +168,12 @@ http://localhost/projeto_todolist
 
 ## 📝 Licença
 
-Este projeto está sob a égide da licença MIT.
+Este projecto é distribuído sob a licença MIT.
 
-Para informações detalhadas, consulte o arquivo:
+Para mais informações, consulte o ficheiro:
 
 ```text
 LICENSE
 ```
 
-anexo ao repositório.
+disponível no repositório.
