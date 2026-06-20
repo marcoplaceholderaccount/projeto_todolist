@@ -18,7 +18,7 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 * **Controle de Sessões:** Mecanismo integrado de autenticação que impede acessos não autorizados a endpoints internos da aplicação.
 * **Criptografia de Credenciais:** Armazenamento seguro de senhas em banco de dados por meio de algoritmos de *hashing* unidirecional, inviabilizando a leitura de dados sensíveis em caso de vazamento.
 
-### 👥 Governança de Utilizadoress e Permissões
+### 👥 Governança de Utilizadores e Permissões
 * **Hierarquia Claras de Acesso:** Divisão explícita de escopo entre perfis do tipo `Administrador` e `Normal`.
 * **Criação Centralizada de Contas:** Por premissa de segurança do ecossistema, **apenas administradores** detêm privilégios para registrar e cadastrar novos utilizadores.
 * **Política Restrita por Padrão:** Novos registros inseridos na plataforma assumem compulsoriamente o status padrão de utilizador comum (`normal`), evitando a escalada involuntária de privilégios.
