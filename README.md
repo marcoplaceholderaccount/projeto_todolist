@@ -41,20 +41,27 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 ## 📂 Estrutura Organizacional do Projeto
 
 ```text
-├── config/
-│   ├── database.php      # Estabelece a conexão segura com o SGBD MySQL
-│   └── timezone.php      # Parametrização do fuso horário padrão (CVT)
-├── database/
-│   └── schema.sql        # Script de modelagem relacional (DDL e DML inicial)
-├── includes/
-│   ├── header.php        # Componente estrutural superior e menu de navegação
-│   └── footer.php        # Componente estrutural inferior e notas de rodapé
-├── modules/
-│   ├── auth/             # Módulo de autenticação, logout e tratamento de hashes
-│   ├── tasks/            # Controladores e interfaces do ecossistema de tarefas
-│   └── users/            # Painel administrativo de controle e cadastro de utilizadores
-├── index.php             # Ponto de entrada unificado da aplicação
-└── README.md             # Documentação técnica do sistema
+├── index.php                 # Ponto de entrada e tela principal do sistema
+├── login.php                 # Interface de autenticação de usuários
+├── logout.php                # Encerramento seguro de sessões ativas
+├── registro.php              # Formulário para entrada de novos utilizadores
+├── db.php                    # Centralização da conexão com o banco de dados MySQL
+├── fundo.php                 # Elementos visuais e estilos secundários de background
+├── libs/                     # Bibliotecas de suporte externas carregadas na aplicação
+├── template/                 # Fragmentos de interface reutilizáveis
+│   ├── header.php            # Componente superior e barra de navegação principal
+│   └── footer.php            # Componente inferior e encerramento estrutural
+└── pages/                    # Módulos de controle específicos da aplicação
+    ├── report/
+    │   └── index.php         # Módulo analítico para geração de relatórios
+    ├── tarefas/
+    │   ├── index.php         # Listagem e painel de controle de tarefas por usuário
+    │   ├── create.php        # Formulário de abertura de novas demandas
+    │   └── update.php        # Interface de alteração e conclusão de tarefas
+    └── utilizadores/
+        ├── index.php         # Painel administrativo de monitoria de utilizadores
+        ├── create.php        # Endpoint de inclusão de contas restrito ao admin
+        └── update.php        # Modificação de credenciais e níveis de acesso
 ```
 ---
 
