@@ -55,3 +55,44 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 │   └── users/            # Painel administrativo de controle e cadastro de usuários
 ├── index.php             # Ponto de entrada unificado da aplicação
 └── README.md             # Documentação técnica do sistema
+```
+⚙️ Instalação e Implantação
+Pré-requisitos
+Para a execução do sistema em ambiente local de homologação, é necessária a infraestrutura de um servidor web com interpretador PHP e o motor de banco de dados MySQL ativos (recomenda-se o uso de ambientes como XAMPP, Laragon, Docker ou stacks LAMP/WAMP equivalentes).
+
+Passo a Passo para Configuração
+Clonagem do Repositório:
+
+Bash
+git clone [https://github.com/marcoplaceholderaccount/projeto_todolist.git](https://github.com/marcoplaceholderaccount/projeto_todolist.git)
+cd projeto_todolist
+Instanciação do Banco de Dados:
+
+Acesse a ferramenta de gerência do seu banco de dados (ex: phpMyAdmin).
+
+Crie um novo schema (banco de dados) denominado todolist_db.
+
+Execute o script contido em database/schema.sql para a correta criação das tabelas e relacionamentos.
+
+Parametrização do Ambiente:
+
+Edite o arquivo localizado em config/database.php.
+
+Substitua as variáveis de ambiente pelas credenciais correspondentes ao seu servidor MySQL local (Host, Usuário, Senha e Nome do Banco).
+
+Alinhamento de Timezone:
+
+O sistema assegura a consistência cronológica executando nativamente o seguinte bloco de instrução nas inicializações:
+
+PHP
+date_default_timezone_set('Atlantic/Cape_Verde');
+Inicialização:
+
+Aloque o diretório do projeto na pasta raiz de execução pública do seu servidor web (ex: htdocs ou www).
+
+Certifique-se de que os serviços do Apache e MySQL estejam operacionais.
+
+Navegue até o endereço: http://localhost/projeto_todolist.
+
+📝 Licença
+Este projeto está sob a égide da licença MIT. Para informações detalhadas, consulte o arquivo LICENSE anexo ao repositório.
