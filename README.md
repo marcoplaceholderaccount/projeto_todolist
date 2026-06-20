@@ -56,43 +56,122 @@ A solução dispõe de uma política de governança de acessos granular, mitigan
 ├── index.php             # Ponto de entrada unificado da aplicação
 └── README.md             # Documentação técnica do sistema
 ```
-⚙️ Instalação e Implantação
-Pré-requisitos
-Para a execução do sistema em ambiente local de homologação, é necessária a infraestrutura de um servidor web com interpretador PHP e o motor de banco de dados MySQL ativos (recomenda-se o uso de ambientes como XAMPP, Laragon, Docker ou stacks LAMP/WAMP equivalentes).
+---
 
-Passo a Passo para Configuração
-Clonagem do Repositório:
+## ⚙️ Instalação e Implantação
 
-Bash
-git clone [https://github.com/marcoplaceholderaccount/projeto_todolist.git](https://github.com/marcoplaceholderaccount/projeto_todolist.git)
+### 📌 Pré-requisitos
+
+Para a execução do sistema em ambiente local de homologação, é necessária a infraestrutura de um servidor web com interpretador PHP e o motor de banco de dados MySQL ativos.
+
+Recomenda-se a utilização de ambientes como:
+
+- XAMPP
+- Laragon
+- Docker
+- LAMP
+- WAMP
+
+ou outras stacks equivalentes.
+
+---
+
+## 🚀 Passo a Passo para Configuração
+
+### 1. Clonagem do Repositório
+
+```bash
+git clone https://github.com/marcoplaceholderaccount/projeto_todolist.git
+
 cd projeto_todolist
-Instanciação do Banco de Dados:
+```
 
-Acesse a ferramenta de gerência do seu banco de dados (ex: phpMyAdmin).
+---
 
-Crie um novo schema (banco de dados) denominado todolist_db.
+### 2. Instanciação do Banco de Dados
 
-Execute o script contido em database/schema.sql para a correta criação das tabelas e relacionamentos.
+1. Acesse a ferramenta de gerenciamento do seu banco de dados (ex.: phpMyAdmin).
 
-Parametrização do Ambiente:
+2. Crie um novo schema (banco de dados) denominado:
 
-Edite o arquivo localizado em config/database.php.
+```text
+todolist_db
+```
 
-Substitua as variáveis de ambiente pelas credenciais correspondentes ao seu servidor MySQL local (Host, Usuário, Senha e Nome do Banco).
+3. Execute o script localizado em:
 
-Alinhamento de Timezone:
+```text
+database/schema.sql
+```
 
-O sistema assegura a consistência cronológica executando nativamente o seguinte bloco de instrução nas inicializações:
+para a correta criação das tabelas e relacionamentos.
 
-PHP
+---
+
+### 3. Parametrização do Ambiente
+
+Edite o arquivo:
+
+```text
+config/database.php
+```
+
+Substitua as variáveis pelas credenciais correspondentes ao seu servidor MySQL local:
+
+- Host
+- Usuário
+- Senha
+- Nome do Banco de Dados
+
+---
+
+### 4. Alinhamento de Timezone
+
+O sistema assegura a consistência cronológica executando nativamente a seguinte instrução durante a inicialização:
+
+```php
 date_default_timezone_set('Atlantic/Cape_Verde');
-Inicialização:
+```
 
-Aloque o diretório do projeto na pasta raiz de execução pública do seu servidor web (ex: htdocs ou www).
+---
 
-Certifique-se de que os serviços do Apache e MySQL estejam operacionais.
+### 5. Inicialização
 
-Navegue até o endereço: http://localhost/projeto_todolist.
+1. Aloque o diretório do projeto na pasta raiz pública do servidor web.
 
-📝 Licença
-Este projeto está sob a égide da licença MIT. Para informações detalhadas, consulte o arquivo LICENSE anexo ao repositório.
+Exemplos:
+
+```text
+htdocs
+```
+
+ou
+
+```text
+www
+```
+
+2. Certifique-se de que os serviços estejam ativos:
+
+- Apache
+- MySQL
+
+3. Navegue até:
+
+```text
+http://localhost/projeto_todolist
+```
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a égide da licença MIT.
+
+Para informações detalhadas, consulte o arquivo:
+
+```text
+LICENSE
+```
+
+anexo ao repositório.
