@@ -172,15 +172,3 @@ http://localhost/projeto_todolist
 ```
 
 ---
-
-## 📝 Licença
-
-Este projecto é distribuído sob a licença MIT.
-
-Para mais informações, consulte o ficheiro:
-
-```text
-LICENSE
-```
-
-disponível no repositório.
