@@ -120,7 +120,7 @@ para criar todas as tabelas, restrições e relacionamentos necessários ao func
 Edite o ficheiro:
 
 ```text
-config/database.php
+db.php
 ```
 
 e actualize os parâmetros de ligação de acordo com a configuração do seu servidor MySQL:
