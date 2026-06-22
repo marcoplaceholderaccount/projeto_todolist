@@ -60,14 +60,15 @@ if($_POST){
             </div>
             <div class="mb-3">
                 <label for="text" class="form-label">Tipo</label>
-                <input
-                    type="text"
-                    class="form-control"
+                <select
+                    class="form-select form-select-sm"
                     name="tipo"
                     id="tipo"
-                    aria-describedby="helpId"
-                    placeholder="Tipo"
-                />
+                >
+                    <option selected>Selecione o tipo de utilizador</option>
+                    <option value="admin">admin</option>
+                    <option value="normal">normal</option>
+                </select>
             </div>
 
             <div class="mb-3">

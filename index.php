@@ -6,7 +6,7 @@ include("fundo.php");?>
 <br/>
 <div class="p-5 mb-4 bg-light-transparent rounded-3">
     <div class="container-fluid py-5">
-        <h5 class="display-5 fw-bold"><?php echo $_SESSION['username'];?>: Bem-vindo ao Sistema</h5>
+        <h5 class="display-5 fw-bold">Olá <?php echo $_SESSION['username'];?>: Bem-vindo ao Sistema</h5>
         <p class="col-md-8 fs-4">
             
             O presente projeto consiste no desenvolvimento de um sistema web de Gestão de Lista de Tarefas,
